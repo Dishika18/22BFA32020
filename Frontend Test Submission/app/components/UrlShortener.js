@@ -146,7 +146,6 @@ export default function UrlShortener() {
 
   return (
     <Container maxWidth="lg" sx={{ pb: 4 }}>
-      {/* Hero Section */}
       <Box sx={{ textAlign: "center", mb: { xs: 4, md: 6 } }}>
         <Typography
           variant="h4"
@@ -168,7 +167,6 @@ export default function UrlShortener() {
         </Typography>
       </Box>
 
-      {/* Main Form Card */}
       <Card
         sx={{
           mb: 4,
@@ -323,7 +321,6 @@ export default function UrlShortener() {
         </CardContent>
       </Card>
 
-      {/* Results Section */}
       {results.length > 0 && (
         <Fade in={results.length > 0} timeout={500}>
           <Card sx={{ overflow: "hidden" }}>

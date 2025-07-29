@@ -52,7 +52,6 @@ export default function Statistics() {
       const sortedUrls = allUrls.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
       setUrls(sortedUrls)
 
-      // Calculate statistics
       const now = new Date()
       const active = sortedUrls.filter((url) => new Date(url.expiryDate) > now).length
       const expired = sortedUrls.length - active
@@ -127,7 +126,6 @@ export default function Statistics() {
 
   return (
     <Container maxWidth="lg" sx={{ pb: 4 }}>
-      {/* Header */}
       <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography
           variant="h4"
@@ -148,7 +146,6 @@ export default function Statistics() {
         </Typography>
       </Box>
 
-      {/* Statistics Cards */}
       <Grid container spacing={3} sx={{ mb: 4 }}>
         <Grid item xs={6} sm={3}>
           <Card sx={{ textAlign: "center", bgcolor: "primary.main", color: "primary.contrastText" }}>
@@ -192,7 +189,6 @@ export default function Statistics() {
         </Grid>
       </Grid>
 
-      {/* URLs List */}
       <Card>
         <CardContent sx={{ p: 0 }}>
           <Box sx={{ p: 3, bgcolor: "grey.50", borderBottom: "1px solid", borderColor: "divider" }}>
@@ -260,7 +256,6 @@ export default function Statistics() {
 
                 <AccordionDetails sx={{ p: 0 }}>
                   <Box sx={{ p: 3 }}>
-                    {/* URL Details */}
                     <Grid container spacing={3} sx={{ mb: 3 }}>
                       <Grid item xs={12} md={6}>
                         <Paper variant="outlined" sx={{ p: 2 }}>
@@ -312,7 +307,6 @@ export default function Statistics() {
                       </Grid>
                     </Grid>
 
-                    {/* Metadata */}
                     <Grid container spacing={2} sx={{ mb: 3 }}>
                       <Grid item xs={6} sm={3}>
                         <Box sx={{ textAlign: "center", p: 2, bgcolor: "grey.50", borderRadius: 2 }}>
@@ -364,7 +358,6 @@ export default function Statistics() {
                       </Grid>
                     </Grid>
 
-                    {/* Click Analytics */}
                     {url.clickHistory && url.clickHistory.length > 0 ? (
                       <Paper variant="outlined" sx={{ p: 3 }}>
                         <Typography variant="h6" gutterBottom sx={{ display: "flex", alignItems: "center", gap: 1 }}>

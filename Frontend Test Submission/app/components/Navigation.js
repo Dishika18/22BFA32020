@@ -23,7 +23,6 @@ export default function Navigation() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
   const [anchorEl, setAnchorEl] = useState(null)
 
-  // Don't show navigation on redirect pages
   if (location.pathname !== "/" && location.pathname !== "/stats") {
     return null
   }

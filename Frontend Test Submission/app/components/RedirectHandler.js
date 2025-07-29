@@ -52,7 +52,6 @@ export default function RedirectHandler() {
         updateClickCount(shortcode, clickData)
         setStatus("redirecting")
 
-        // Countdown timer
         const timer = setInterval(() => {
           setCountdown((prev) => {
             if (prev <= 1) {
